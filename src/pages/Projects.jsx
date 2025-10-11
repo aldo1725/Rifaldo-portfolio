@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const projects = [
@@ -54,12 +54,20 @@ const projects = [
 
 export default function Projects() {
   const [selected, setSelected] = useState(projects[0]);
+  const topRef = useRef(null); // 👉 untuk scroll otomatis ke atas
+
+  const handleSelect = (p) => {
+    setSelected(p);
+    // scroll lembut ke bagian atas
+    topRef.current.scrollIntoView({ behavior: "smooth", block: "center" });
+  };
 
   return (
     <section id="projects" className="bg-gray-50 py-16 md:py-24 overflow-hidden">
       <div className="max-w-6xl mx-auto px-6">
         {/* Judul */}
         <motion.h2
+          ref={topRef} // target scroll
           className="text-3xl font-bold text-center mb-2"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -67,6 +75,7 @@ export default function Projects() {
         >
           Proyek Unggulan
         </motion.h2>
+
         <motion.p
           className="text-center text-gray-600 mb-10"
           initial={{ opacity: 0, y: 10 }}
@@ -76,7 +85,7 @@ export default function Projects() {
           Kumpulan proyek yang menunjukkan keahlian saya dalam bidang robotika, Internet of Things (IoT), dan sistem tertanam.
         </motion.p>
 
-        {/* Proyek utama (ditampilkan di atas) */}
+        {/* Proyek utama */}
         <AnimatePresence mode="wait">
           <motion.div
             key={selected.title}
@@ -117,7 +126,7 @@ export default function Projects() {
           </motion.div>
         </AnimatePresence>
 
-        {/* Daftar proyek lain */}
+        {/* Daftar proyek */}
         <motion.div
           className="grid md:grid-cols-3 gap-6"
           initial={{ opacity: 0 }}
@@ -127,7 +136,7 @@ export default function Projects() {
           {projects.map((p, i) => (
             <motion.div
               key={i}
-              onClick={() => setSelected(p)}
+              onClick={() => handleSelect(p)} // klik = tampilkan di atas + scroll
               whileHover={{ y: -4, scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               transition={{ type: "spring", stiffness: 200, damping: 15 }}
