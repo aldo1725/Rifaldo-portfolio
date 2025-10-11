@@ -54,12 +54,18 @@ const projects = [
 
 export default function Projects() {
   const [selected, setSelected] = useState(projects[0]);
-  const topRef = useRef(null); // 👉 untuk scroll otomatis ke atas
+  const topRef = useRef(null);
 
   const handleSelect = (p) => {
     setSelected(p);
-    // scroll lembut ke bagian atas
-    topRef.current.scrollIntoView({ behavior: "smooth", block: "center" });
+
+    // 🪄 Scroll dengan offset agar konten muncul tepat di tengah
+    const element = topRef.current;
+    const navbarHeight = 80; // kira-kira tinggi navbar
+    const yOffset =
+      element.getBoundingClientRect().top + window.pageYOffset - navbarHeight - 100;
+
+    window.scrollTo({ top: yOffset, behavior: "smooth" });
   };
 
   return (
@@ -67,7 +73,7 @@ export default function Projects() {
       <div className="max-w-6xl mx-auto px-6">
         {/* Judul */}
         <motion.h2
-          ref={topRef} // target scroll
+          ref={topRef}
           className="text-3xl font-bold text-center mb-2"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -136,7 +142,7 @@ export default function Projects() {
           {projects.map((p, i) => (
             <motion.div
               key={i}
-              onClick={() => handleSelect(p)} // klik = tampilkan di atas + scroll
+              onClick={() => handleSelect(p)}
               whileHover={{ y: -4, scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               transition={{ type: "spring", stiffness: 200, damping: 15 }}
