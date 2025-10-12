@@ -11,6 +11,7 @@ export default function Navbar() {
           <li><a href="#Activities" className="hover:text-brand">Activities</a></li>
           <li><a href="#Experience" className="hover:text-brand">Experience</a></li>
           <li><a href="#projects" className="hover:text-brand">Projects</a></li>
+          <li><a href="#Achievements" className="hover:text-brand">Achievements</a></li>
           <li><a href="#contact" className="hover:text-brand">Contact</a></li>
         </ul>
         <a href="#contact" className="btn btn-primary md:inline-block">Hire Me</a>
