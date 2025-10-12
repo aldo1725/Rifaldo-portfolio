@@ -6,6 +6,7 @@ import Activities from "./pages/Activities";
 import Experience from "./pages/Experience";
 import Projects from "./pages/Projects";
 import Achievements from "./pages/Achievements";
+import Skills from "./pages/Skills";
 import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
 
@@ -20,6 +21,7 @@ export default function App() {
         <Experience />
         <Projects />
         <Achievements />
+        <Skills />
         <Contact />
       </main>
       <Footer />
