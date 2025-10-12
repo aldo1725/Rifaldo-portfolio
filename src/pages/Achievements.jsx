@@ -10,11 +10,11 @@ import kri2023_final from "../assets/certificates/kri2023_final.jpg";
 import kri2024_wilayah from "../assets/certificates/kri2024_wilayah.jpg";
 import kri2024_final from "../assets/certificates/kri2024_final.jpg";
 import pkmkc from "../assets/certificates/pkmkc.jpg";
-import stechoq1 from "../assets/certificates/stechoq_participation.jpg";
-import stechoq2 from "../assets/certificates/stechoq_hardware.jpg";
-import stechoq3 from "../assets/certificates/stechoq_project.jpg";
-import stechoq4 from "../assets/certificates/stechoq_award.jpg";
-import bintangAktivis from "../assets/certificates/bintang-aktivis.jpg";
+import stechoq1 from "../assets/certificates/stechoq1.jpg";
+import stechoq2 from "../assets/certificates/stechoq2.jpg";
+import stechoq3 from "../assets/certificates/stechoq3.jpg";
+import stechoq4 from "../assets/certificates/stechoq4.jpg";
+import bintangAktivis from "../assets/certificates/bintangAktivis.jpg";
 
 const achievements = [
   {
