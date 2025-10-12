@@ -61,7 +61,7 @@ export default function Projects() {
 
     // 🪄 Scroll dengan offset agar konten muncul tepat di tengah
     const element = topRef.current;
-    const navbarHeight = 80; // kira-kira tinggi navbar
+    const navbarHeight = 140; // kira-kira tinggi navbar
     const yOffset =
       element.getBoundingClientRect().top + window.pageYOffset - navbarHeight - 100;
 
@@ -69,7 +69,7 @@ export default function Projects() {
   };
 
   return (
-    <section id="projects" className="bg-gray-50 py-16 md:py-24 overflow-hidden">
+    <section id="projects" className="bg-gray-50 py-14 md:py-20 overflow-hidden">
       <div className="max-w-6xl mx-auto px-6">
         {/* Judul */}
         <motion.h2

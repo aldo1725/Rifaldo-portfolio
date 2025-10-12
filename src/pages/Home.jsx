@@ -5,7 +5,7 @@ import avatar from "../assets/avatar.svg";
 export default function Home() {
   return (
     <section id="home" className="bg-gray-50 scroll-mt-[120px]">
-      <div className="max-w-6xl mx-auto px-6 py-16 md:py-20 grid md:grid-cols-2 gap-10 items-center">
+      <div className="max-w-6xl mx-auto px-6 py-8 md:py-12 grid md:grid-cols-2 gap-10 items-center">
 
         
         {/* Bagian kiri - teks */}
