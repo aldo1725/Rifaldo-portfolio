@@ -78,7 +78,7 @@ export default function Achievements() {
 
   return (
     <section
-      id="achievements"
+      id="Achievements"
       className="py-16 md:py-24 bg-gray-50 overflow-hidden scroll-mt-[100px]"
     >
       <div className="max-w-6xl mx-auto px-6">
