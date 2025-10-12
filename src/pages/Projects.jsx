@@ -69,7 +69,7 @@ export default function Projects() {
   };
 
   return (
-    <section id="projects" className="bg-gray-50 py-14 md:py-20 overflow-hidden">
+    <section id="projects" className="bg-gray-50 py-16 md:py-24 overflow-hidden">
       <div className="max-w-6xl mx-auto px-6">
         {/* Judul */}
         <motion.h2
