@@ -1,9 +1,12 @@
 import React from "react";
-import { GraduationCap, Award, Target } from "lucide-react"; // untuk ikon
+import { GraduationCap, Target } from "lucide-react"; // hapus ikon Award karena tidak digunakan
 
 export default function About() {
   return (
-    <section id="About" className="py-16 md:py-24 scroll-mt-[120px] bg-white">
+    <section
+      id="About"
+      className="py-20 md:py-28 scroll-mt-[60 px] bg-white" // ubah margin scroll biar posisinya pas di atas
+    >
       <div className="max-w-5xl mx-auto px-6">
         {/* Judul */}
         <h2 className="text-3xl font-bold text-center mb-6">About Me</h2>
@@ -27,18 +30,10 @@ export default function About() {
               <p className="text-gray-700">D4 Teknik Elektro Industri</p>
               <p className="text-gray-600 text-sm">Universitas Negeri Padang</p>
               <p className="text-gray-500 text-sm mt-1">
-                2021 – 2025 <span className="ml-2 bg-blue-100 text-blue-700 text-xs font-semibold px-2 py-1 rounded">IPK: 3.56 / 4.00</span>
-              </p>
-            </div>
-          </div>
-
-          {/* Prestasi */}
-          <div className="flex items-start gap-4 bg-green-50 border border-green-100 p-5 rounded-xl shadow-sm">
-            <Award className="text-green-500 w-8 h-8" />
-            <div>
-              <h3 className="font-semibold text-lg text-gray-800">Prestasi</h3>
-              <p className="text-gray-700">
-                Penerima penghargaan <span className="font-semibold">Campus Activist Star Award</span> pada Wisuda ke-140 UNP.
+                2021 – 2025{" "}
+                <span className="ml-2 bg-blue-100 text-blue-700 text-xs font-semibold px-2 py-1 rounded">
+                  IPK: 3.56 / 4.00
+                </span>
               </p>
             </div>
           </div>
