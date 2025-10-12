@@ -3,9 +3,12 @@ import { motion } from "framer-motion";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0f172a] text-gray-300 py-10 px-6 mt-20 border-t border-gray-700">
+    <footer
+      id="contact"
+      className="bg-[#0f172a] text-gray-300 py-10 px-6 mt-20 border-t border-gray-700 scroll-mt-[80px]"
+    >
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
-
+        
         {/* Kolom 1: Profil */}
         <div>
           <h3 className="text-xl font-semibold text-white mb-2">
