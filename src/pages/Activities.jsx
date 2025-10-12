@@ -2,18 +2,12 @@ import React from "react";
 import Slider from "react-slick";
 import { motion } from "framer-motion";
 
-// Import gambar kegiatan
-import kegiatan1 from "./slide/kegiatan1.jpg";
-import kegiatan2 from "./slide/kegiatan2.jpg";
-import kegiatan3 from "./slide/kegiatan3.jpg";
-import kegiatan4 from "./slide/kegiatan4.jpg";
-
 export default function Activities() {
   const slides = [
-    { img: kegiatan1, caption: "Lomba KRI 2022 - Kontes Robot Indonesia" },
-    { img: kegiatan2, caption: "Workshop IoT di Universitas Negeri Padang" },
-    { img: kegiatan3, caption: "Riset Pengembangan Sensor Cuaca Cerdas" },
-    { img: kegiatan4, caption: "Demo Proyek AI & IoT Terapan 2024" },
+    { img: "/slide/kegiatan1.jpg", caption: "Lomba KRI 2022 - Kontes Robot Indonesia" },
+    { img: "/slide/kegiatan2.jpg", caption: "Workshop IoT di Universitas Negeri Padang" },
+    { img: "/slide/kegiatan3.jpg", caption: "Riset Pengembangan Sensor Cuaca Cerdas" },
+    { img: "/slide/kegiatan4.jpg", caption: "Demo Proyek AI & IoT Terapan 2024" },
   ];
 
   const settings = {
@@ -42,7 +36,7 @@ export default function Activities() {
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      viewport={{ once: true }} // animasi hanya muncul sekali saat di-scroll
+      viewport={{ once: true }}
     >
       <div className="w-full max-w-3xl px-6">
         {/* Judul */}

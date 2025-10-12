@@ -2,62 +2,62 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Slider from "react-slick";
 
-// Import gambar sertifikat
-import kri2022_wilayah from "../assets/certificates/kri2022_wilayah.jpg";
-import kri2022_final from "../assets/certificates/kri2022_final.jpg";
-import kri2023_wilayah from "../assets/certificates/kri2023_wilayah.jpg";
-import kri2023_final from "../assets/certificates/kri2023_final.jpg";
-import kri2024_wilayah from "../assets/certificates/kri2024_wilayah.jpg";
-import kri2024_final from "../assets/certificates/kri2024_final.jpg";
-import pkmkc from "../assets/certificates/pkmkc.jpg";
-import stechoq1 from "../assets/certificates/stechoq1.jpg";
-import stechoq2 from "../assets/certificates/stechoq2.jpg";
-import stechoq3 from "../assets/certificates/stechoq3.jpg";
-import stechoq4 from "../assets/certificates/stechoq4.jpg";
-import bintangAktivis from "../assets/certificates/bintangAktivis.jpg";
-
 const achievements = [
   {
     year: "2022",
     title: "Kontes Robotika Indonesia 2022",
     desc: "Menjadi finalis nasional pada Divisi KRAI (Kontes Robot ABU Indonesia) setelah berhasil lolos seleksi tingkat wilayah. Berpartisipasi sebagai tim inti dalam pengembangan sistem mekanik dan pengendalian robot di ITS Surabaya.",
     kategori: "Kompetisi Nasional Robotika",
-    images: [kri2022_wilayah, kri2022_final],
+    images: [
+      "/certificates/kri2022_wilayah.jpg",
+      "/certificates/kri2022_final.jpg",
+    ],
   },
   {
     year: "2023",
     title: "Kontes Robotika Indonesia 2023",
     desc: "Mewakili Universitas Negeri Padang dalam KRI 2023 Divisi KRAI. Berhasil lolos seleksi wilayah dan menjadi finalis nasional dengan tema 'Casting Flowers over Angkor Wat'.",
     kategori: "Kompetisi Nasional Robotika",
-    images: [kri2023_wilayah, kri2023_final],
+    images: [
+      "/certificates/kri2023_wilayah.jpg",
+      "/certificates/kri2023_final.jpg",
+    ],
   },
   {
     year: "2023",
     title: "Lolos Skema Pendanaan PKM-KC",
     desc: "Proyek 'Vibrating Headphone with Speech-to-Text Technology' berhasil lolos skema pendanaan PKM-KC 2023 dari Ditjen Diktiristek. Fokus pada teknologi inklusif dan inovasi sosial.",
     kategori: "Inovasi & Penelitian",
-    images: [pkmkc],
+    images: ["/certificates/pkmkc.jpg"],
   },
   {
     year: "2024",
     title: "Kontes Robotika Indonesia 2024",
     desc: "Finalis nasional KRI 2024 Divisi KRAI di Universitas Muhammadiyah Surakarta dengan tema 'Harvest Day'. Mengembangkan robot otonom pemanen hasil pertanian.",
     kategori: "Kompetisi Nasional Robotika",
-    images: [kri2024_wilayah, kri2024_final],
+    images: [
+      "/certificates/kri2024_wilayah.jpg",
+      "/certificates/kri2024_final.jpg",
+    ],
   },
   {
     year: "2024",
     title: "Program MSIB Batch 7 – PT Stechoq Robotika Indonesia",
     desc: "Mengikuti program Magang dan Studi Independen Bersertifikat (MSIB) Batch 7 di PT Stechoq Robotika Indonesia pada bidang Hardware Engineering. Mengembangkan proyek akhir berupa ventilator berbasis Internet of Things (IoT) untuk kebutuhan medis. Juga menerima penghargaan sebagai The Most Knowledgeable Mentee.",
     kategori: "Studi Independen & Profesional",
-    images: [stechoq1, stechoq2, stechoq3, stechoq4],
+    images: [
+      "/certificates/stechoq1.jpg",
+      "/certificates/stechoq2.jpg",
+      "/certificates/stechoq3.jpg",
+      "/certificates/stechoq4.jpg",
+    ],
   },
   {
     year: "2025",
     title: "Bintang Aktivis – Wisuda ke-140 Universitas Negeri Padang",
     desc: "Dianugerahi penghargaan 'Bintang Aktivis' sebagai pengakuan atas kontribusi dan kepemimpinan di Unit Kegiatan Robotika Universitas Negeri Padang.",
     kategori: "Penghargaan Kemahasiswaan",
-    images: [bintangAktivis],
+    images: ["/certificates/bintangAktivis.jpg"],
   },
 ];
 
@@ -77,7 +77,10 @@ export default function Achievements() {
   };
 
   return (
-    <section id="Achievements" className="py-16 md:py-24 bg-gray-50 overflow-hidden">
+    <section
+      id="achievements"
+      className="py-16 md:py-24 bg-gray-50 overflow-hidden scroll-mt-[100px]"
+    >
       <div className="max-w-6xl mx-auto px-6">
         {/* Judul */}
         <motion.h2
@@ -95,7 +98,8 @@ export default function Achievements() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.6 }}
         >
-          Kumpulan penghargaan dan pencapaian yang mencerminkan dedikasi dalam bidang robotika, inovasi, dan pengembangan teknologi.
+          Kumpulan penghargaan dan pencapaian yang mencerminkan dedikasi dalam
+          bidang robotika, inovasi, dan pengembangan teknologi.
         </motion.p>
 
         <div className="grid md:grid-cols-2 gap-10">
@@ -120,8 +124,12 @@ export default function Achievements() {
                 }`}
               >
                 <p className="text-sm text-gray-500">{item.year}</p>
-                <h4 className="font-semibold text-lg text-gray-800">{item.title}</h4>
-                <p className="text-sm text-gray-600 line-clamp-2 mt-2">{item.desc}</p>
+                <h4 className="font-semibold text-lg text-gray-800">
+                  {item.title}
+                </h4>
+                <p className="text-sm text-gray-600 line-clamp-2 mt-2">
+                  {item.desc}
+                </p>
               </motion.div>
             ))}
           </motion.div>

@@ -15,8 +15,8 @@ export default function Home() {
             Hi, I’m <span className="text-brand">Rifaldo</span> 👋
           </h1>
           <p className="text-lg text-gray-600 mb-6">
-            Mahasiswa Teknik yang fokus pada <b>Internet of Things</b>, <b>Artificial Intelligence</b>, dan{" "}
-            <b>Web Development</b>. Saat ini mengerjakan proyek <i>Weather Station IoT</i> untuk pertanian cerdas.
+            Mahasiswa Teknik ELektro yang fokus pada <b>Internet of Things</b>, <b>Robotika</b>, dan{" "}
+            <b>Otomasi</b>. Saat ini mengerjakan proyek <i>Weather Station IoT</i> Camber IoT.
           </p>
           <div className="flex gap-3">
             <a href="#projects" className="btn btn-primary">Lihat Projects</a>
