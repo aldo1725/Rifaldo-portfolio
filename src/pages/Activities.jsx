@@ -32,7 +32,7 @@ export default function Activities() {
   return (
     <motion.section
       id="Activities"
-      className="py-20 bg-white flex justify-center scroll-mt-[120px]"
+      className="py-20 bg-white flex justify-center scroll-mt-[80px]"
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}

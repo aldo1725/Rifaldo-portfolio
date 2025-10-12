@@ -52,7 +52,7 @@ export default function Experience() {
   return (
     <section
       id="Experience"
-      className="py-12 sm:py-16 md:py-24 bg-white overflow-hidden scroll-mt-[120px]"
+      className="py-12 sm:py-16 md:py-24 bg-white overflow-hidden scroll-mt-[80px]"
     >
       <div className="max-w-6xl mx-auto px-6">
         {/* Judul */}
