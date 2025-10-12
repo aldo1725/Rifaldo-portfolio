@@ -67,27 +67,39 @@ export default function Achievements() {
   const sliderSettings = {
     dots: true,
     infinite: true,
-    speed: 600,
+    speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
     autoplay: true,
-    autoplaySpeed: 4000,
+    autoplaySpeed: 3500,
     pauseOnHover: true,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          dots: true,
+          arrows: false,
+          speed: 400,
+          autoplaySpeed: 3000,
+        },
+      },
+    ],
   };
 
   return (
     <section
       id="Achievements"
-      className="py-16 md:py-24 bg-gray-50 overflow-hidden scroll-mt-[60px]"
+      className="py-12 sm:py-16 md:py-24 bg-gray-50 overflow-hidden scroll-mt-[80px]"
     >
       <div className="max-w-6xl mx-auto px-6">
         {/* Judul */}
         <motion.h2
           className="text-3xl font-bold text-center mb-2"
           initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
         >
           Reward & Pencapaian
         </motion.h2>
@@ -95,19 +107,22 @@ export default function Achievements() {
         <motion.p
           className="text-center text-gray-600 mb-10"
           initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.6 }}
+          viewport={{ once: true }}
         >
           Kumpulan penghargaan dan pencapaian yang mencerminkan dedikasi dalam
           bidang robotika, inovasi, dan pengembangan teknologi.
         </motion.p>
 
-        <div className="grid md:grid-cols-2 gap-10">
+        {/* Grid utama */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Daftar kiri */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: true }}
             className="space-y-4"
           >
             {achievements.map((item, i) => (
@@ -120,7 +135,7 @@ export default function Achievements() {
                 className={`cursor-pointer p-5 border rounded-xl shadow-sm transition ${
                   selected.title === item.title
                     ? "border-blue-500 shadow-md bg-blue-50"
-                    : "bg-white"
+                    : "bg-white hover:shadow-md"
                 }`}
               >
                 <p className="text-sm text-gray-500">{item.year}</p>
@@ -142,13 +157,13 @@ export default function Achievements() {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -40 }}
               transition={{ duration: 0.6, ease: "easeInOut" }}
-              className="bg-white p-6 rounded-2xl shadow-md flex flex-col items-center"
+              className="bg-white p-6 rounded-2xl shadow-md flex flex-col items-center text-center"
             >
-              <h3 className="text-xl font-bold mb-2 text-blue-700 text-center">
+              <h3 className="text-xl font-bold mb-2 text-blue-700">
                 {selected.title}
               </h3>
               <p className="text-sm text-gray-500 mb-2">{selected.year}</p>
-              <p className="text-gray-700 leading-relaxed mb-4 text-center">
+              <p className="text-gray-700 leading-relaxed mb-4">
                 {selected.desc}
               </p>
               <p className="text-sm text-gray-600 mb-6">
@@ -168,7 +183,7 @@ export default function Achievements() {
                     <img
                       src={img}
                       alt={`Sertifikat ${selected.title}`}
-                      className="rounded-xl shadow-lg w-full h-[320px] object-contain bg-gray-100"
+                      className="rounded-xl shadow-lg w-full h-[240px] sm:h-[320px] object-contain bg-gray-100"
                     />
                   </motion.div>
                 ))}
