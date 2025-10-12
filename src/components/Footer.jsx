@@ -35,28 +35,28 @@ export default function Footer() {
           <h4 className="text-lg font-semibold text-white mb-3">Navigasi Cepat</h4>
           <ul className="space-y-2 text-sm">
             <li>
-              <a href="#about" className="hover:text-blue-400 transition-colors">
+              <a href="#About" className="hover:text-blue-400 transition-colors">
                 Tentang
               </a>
             </li>
             <li>
-              <a href="#experience" className="hover:text-blue-400 transition-colors">
+              <a href="#Experience" className="hover:text-blue-400 transition-colors">
                 Pengalaman
               </a>
             </li>
             <li>
-              <a href="#projects" className="hover:text-blue-400 transition-colors">
+              <a href="#Projects" className="hover:text-blue-400 transition-colors">
                 Proyek
               </a>
             </li>
             <li>
-              <a href="#skills" className="hover:text-blue-400 transition-colors">
+              <a href="#Skills" className="hover:text-blue-400 transition-colors">
                 Keahlian
               </a>
             </li>
             <li>
-              <a href="#contact" className="hover:text-blue-400 transition-colors">
-                Kontak
+              <a href="#Achievements" className="hover:text-blue-400 transition-colors">
+                Penghargaan
               </a>
             </li>
           </ul>
