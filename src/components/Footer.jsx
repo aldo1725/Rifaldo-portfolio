@@ -73,17 +73,6 @@ export default function Footer() {
               </a>
             </li>
             <li>
-              <strong>Telepon:</strong>{" "}
-              <a
-                href="https://wa.me/6283186234095"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-green-400 hover:underline"
-              >
-                +62 831 8623 4095
-              </a>
-            </li>
-            <li>
               <strong>LinkedIn:</strong>{" "}
               <a
                 href="https://linkedin.com/in/rifaldosaputra"
@@ -105,8 +94,9 @@ export default function Footer() {
         transition={{ duration: 0.8 }}
         className="text-center text-gray-500 text-sm mt-10 border-t border-gray-700 pt-5"
       >
-        © {new Date().getFullYear()} <span className="text-gray-300 font-medium">Rifaldo Saputra.</span>{" "}
-        Dibuat dengan ❤️ menggunakan React & TailwindCSS.
+        © {new Date().getFullYear()}{" "}
+        <span className="text-gray-300 font-medium">Rifaldo Saputra.</span>{" "}
+        Dibuat dengan menggunakan React & TailwindCSS.
       </motion.div>
     </footer>
   );
