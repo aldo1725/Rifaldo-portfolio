@@ -79,7 +79,7 @@ export default function Achievements() {
   return (
     <section
       id="Achievements"
-      className="py-16 md:py-24 bg-gray-50 overflow-hidden scroll-mt-[100px]"
+      className="py-16 md:py-24 bg-gray-50 overflow-hidden scroll-mt-[60px]"
     >
       <div className="max-w-6xl mx-auto px-6">
         {/* Judul */}

@@ -20,7 +20,7 @@ export default function Activities() {
     slidesToShow: 1,
     slidesToScroll: 1,
     centerMode: true,
-    centerPadding: "50px",
+    centerPadding: "20px",
     pauseOnHover: true,
     arrows: false,
     cssEase: "ease-in-out",
