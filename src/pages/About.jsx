@@ -5,7 +5,7 @@ export default function About() {
   return (
     <section
       id="About"
-      className="py-20 md:py-28 scroll-mt-[60 px] bg-white" // ubah margin scroll biar posisinya pas di atas
+      className="py-20 md:py-28 scroll-mt-[50px] bg-white" // ubah margin scroll biar posisinya pas di atas
     >
       <div className="max-w-5xl mx-auto px-6">
         {/* Judul */}
