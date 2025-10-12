@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const experiences = [
@@ -30,19 +30,38 @@ const experiences = [
 
 export default function Experience() {
   const [selected, setSelected] = useState(experiences[0]);
+  const detailRef = useRef(null);
+
+  // Auto scroll berfungsi di desktop & HP
+  const handleSelect = (exp) => {
+    setSelected(exp);
+    setTimeout(() => {
+      if (detailRef.current) {
+        const yOffset =
+          window.innerWidth >= 768 ? -100 : -60; // posisi lebih tinggi sedikit di desktop
+        const y =
+          detailRef.current.getBoundingClientRect().top +
+          window.pageYOffset +
+          yOffset;
+
+        window.scrollTo({ top: y, behavior: "smooth" });
+      }
+    }, 250);
+  };
 
   return (
     <section
       id="Experience"
-      className="py-16 md:py-24 bg-white overflow-hidden"
+      className="py-12 sm:py-16 md:py-24 bg-white overflow-hidden scroll-mt-[80px]"
     >
       <div className="max-w-6xl mx-auto px-6">
         {/* Judul */}
         <motion.h2
           className="text-3xl font-bold text-center mb-2"
           initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
         >
           Pengalaman Organisasi
         </motion.h2>
@@ -50,32 +69,35 @@ export default function Experience() {
         <motion.p
           className="text-center text-gray-600 mb-10"
           initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.6 }}
+          viewport={{ once: true }}
         >
           Riwayat pengalaman dan kontribusi saya dalam kegiatan organisasi dan
           kepemimpinan di Unit Kegiatan Robotika Universitas Negeri Padang.
         </motion.p>
 
-        <div className="grid md:grid-cols-2 gap-10">
-          {/* Daftar Pengalaman */}
+        {/* Grid utama */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* Daftar kiri */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: true }}
             className="space-y-4"
           >
             {experiences.map((exp, i) => (
               <motion.div
                 key={i}
-                onClick={() => setSelected(exp)}
+                onClick={() => handleSelect(exp)}
                 whileHover={{ x: 5, scale: 1.02 }}
                 whileTap={{ scale: 0.97 }}
                 transition={{ type: "spring", stiffness: 180, damping: 15 }}
                 className={`cursor-pointer p-5 border rounded-xl shadow-sm transition ${
                   selected.title === exp.title
                     ? "border-blue-500 shadow-md bg-blue-50"
-                    : "bg-white"
+                    : "bg-white hover:shadow-md"
                 }`}
               >
                 <p className="text-sm text-gray-500">{exp.year}</p>
@@ -89,9 +111,10 @@ export default function Experience() {
             ))}
           </motion.div>
 
-          {/* Detail Pengalaman */}
+          {/* Detail kanan */}
           <AnimatePresence mode="wait">
             <motion.div
+              ref={detailRef}
               key={selected.title}
               initial={{ opacity: 0, x: 40 }}
               animate={{ opacity: 1, x: 0 }}

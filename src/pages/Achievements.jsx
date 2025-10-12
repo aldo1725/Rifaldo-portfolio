@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Slider from "react-slick";
 
@@ -63,6 +63,23 @@ const achievements = [
 
 export default function Achievements() {
   const [selected, setSelected] = useState(achievements[0]);
+  const detailRef = useRef(null);
+
+  // Fungsi scroll ke detail (aktif di semua perangkat)
+  const handleSelect = (item) => {
+    setSelected(item);
+    setTimeout(() => {
+      if (detailRef.current) {
+        const yOffset =
+          window.innerWidth >= 768 ? -100 : -60; // desktop & mobile offset
+        const y =
+          detailRef.current.getBoundingClientRect().top +
+          window.pageYOffset +
+          yOffset;
+        window.scrollTo({ top: y, behavior: "smooth" });
+      }
+    }, 250);
+  };
 
   const sliderSettings = {
     dots: true,
@@ -128,7 +145,7 @@ export default function Achievements() {
             {achievements.map((item, i) => (
               <motion.div
                 key={i}
-                onClick={() => setSelected(item)}
+                onClick={() => handleSelect(item)}
                 whileHover={{ x: 5, scale: 1.02 }}
                 whileTap={{ scale: 0.97 }}
                 transition={{ type: "spring", stiffness: 180, damping: 15 }}
@@ -152,12 +169,17 @@ export default function Achievements() {
           {/* Detail kanan */}
           <AnimatePresence mode="wait">
             <motion.div
+              ref={detailRef}
               key={selected.title}
               initial={{ opacity: 0, x: 40 }}
-              animate={{ opacity: 1, x: 0 }}
+              animate={{
+                opacity: 1,
+                x: 0,
+                boxShadow: "0 0 20px rgba(37, 99, 235, 0.2)",
+              }}
               exit={{ opacity: 0, x: -40 }}
               transition={{ duration: 0.6, ease: "easeInOut" }}
-              className="bg-white p-6 rounded-2xl shadow-md flex flex-col items-center text-center"
+              className="bg-white p-6 rounded-2xl shadow-md flex flex-col items-center text-center border border-blue-100"
             >
               <h3 className="text-xl font-bold mb-2 text-blue-700">
                 {selected.title}
