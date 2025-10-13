@@ -67,7 +67,7 @@ export default function Skills() {
   ];
 
   return (
-    <section id="Skills" className="py-10 md:py-14 bg-gray-50 scroll-mt-[80px]">
+    <section id="Skills" className="py-10 md:py-8 bg-gray-50 scroll-mt-[80px]">
       <div className="max-w-6xl mx-auto px-6">
         {/* Judul */}
         <motion.h2
