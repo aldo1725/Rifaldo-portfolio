@@ -44,7 +44,7 @@ export default function Activities() {
   return (
     <motion.section
       id="Activities"
-      className="py-14 bg-white overflow-hidden scroll-mt-[90px]"
+      className="py-14 bg-white overflow-hidden scroll-mt-[60px]"
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
