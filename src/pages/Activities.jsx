@@ -19,8 +19,8 @@ export default function Activities() {
     autoplaySpeed: 3500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    centerMode: true,
-    centerPadding: "20px",
+    centerMode: false, // 🔧 nonaktifkan biar gambar tidak geser ke kanan
+    centerPadding: "0px",
     pauseOnHover: true,
     arrows: false,
     cssEase: "ease-in-out",
@@ -32,13 +32,13 @@ export default function Activities() {
   return (
     <motion.section
       id="Activities"
-      className="py-10 md:py-10 bg-white overflow-hidden scroll-mt-[60px]"
+      className="py-14 bg-white overflow-hidden scroll-mt-[90px]" // ✅ jarak pas dengan navbar
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
       viewport={{ once: true }}
     >
-      <div className="w-full max-w-3xl px-6">
+      <div className="max-w-4xl mx-auto px-6">
         {/* Judul */}
         <motion.h2
           className="text-3xl font-bold text-center mb-2"
@@ -64,6 +64,7 @@ export default function Activities() {
           initial={{ opacity: 0, scale: 0.97 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
+          className="mx-auto"
         >
           <Slider {...settings}>
             {slides.map((s, i) => (
@@ -74,10 +75,10 @@ export default function Activities() {
                 <img
                   src={s.img}
                   alt={s.caption}
-                  className="rounded-2xl shadow-lg w-[90%] h-[280px] object-cover transition-transform duration-700 hover:scale-[1.02]"
+                  className="rounded-2xl shadow-lg w-full md:w-[90%] h-[260px] sm:h-[300px] md:h-[360px] object-cover transition-transform duration-700 hover:scale-[1.02]"
                 />
-                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[90%] bg-black bg-opacity-50 text-white text-center p-3 rounded-b-2xl">
-                  <p className="text-sm md:text-base">{s.caption}</p>
+                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full md:w-[90%] bg-black bg-opacity-50 text-white text-center p-3 rounded-b-2xl">
+                  <p className="text-sm md:text-base font-medium">{s.caption}</p>
                 </div>
               </div>
             ))}
