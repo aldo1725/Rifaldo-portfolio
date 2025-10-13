@@ -5,7 +5,7 @@ export default function About() {
   return (
     <section
       id="About"
-      className="pt-4 pb-10 scroll-mt-[60px] bg-white" // ubah margin scroll biar posisinya pas di atas
+      className="pt-4 pb-10 scroll-mt-[75px] bg-white" // ubah margin scroll biar posisinya pas di atas
     >
       <div className="max-w-5xl mx-auto px-6">
         {/* Judul */}
