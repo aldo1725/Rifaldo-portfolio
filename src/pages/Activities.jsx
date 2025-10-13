@@ -4,35 +4,47 @@ import { motion } from "framer-motion";
 
 export default function Activities() {
   const slides = [
-    { img: "/slide/kegiatan1.jpg", caption: "Lomba KRI 2022 - Kontes Robot Indonesia" },
-    { img: "/slide/kegiatan2.jpg", caption: "Workshop IoT di Universitas Negeri Padang" },
-    { img: "/slide/kegiatan3.jpg", caption: "Riset Pengembangan Sensor Cuaca Cerdas" },
-    { img: "/slide/kegiatan4.jpg", caption: "Demo Proyek AI & IoT Terapan 2024" },
+    {
+      img: "/slide/kegiatan1.jpg",
+      caption: "Lomba KRI 2022 - Kontes Robot Indonesia",
+    },
+    {
+      img: "/slide/kegiatan2.jpg",
+      caption: "Workshop IoT di Universitas Negeri Padang",
+    },
+    {
+      img: "/slide/kegiatan3.jpg",
+      caption: "Riset Pengembangan Sensor Cuaca Cerdas",
+    },
+    {
+      img: "/slide/kegiatan4.jpg",
+      caption: "Demo Proyek AI & IoT Terapan 2024",
+    },
   ];
 
   const settings = {
-      dots: true,
-      infinite: true,
-      autoplay: true,
-      fade: false,
-      speed: 800,
-      autoplaySpeed: 3500,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      centerMode: false,          // ubah ke false
-      centerPadding: "0px",
-      pauseOnHover: true,
-      arrows: false,
-      cssEase: "ease-in-out",
-      swipe: true,
-      swipeToSlide: true,
-      touchMove: true,
+    dots: true,
+    infinite: true,
+    autoplay: true,
+    fade: false, // efek slide kiri-kanan
+    speed: 800,
+    autoplaySpeed: 3500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    centerMode: false, // biar foto rata tengah
+    centerPadding: "0px",
+    pauseOnHover: true,
+    arrows: false,
+    cssEase: "ease-in-out",
+    swipe: true,
+    swipeToSlide: true,
+    touchMove: true,
   };
 
   return (
     <motion.section
       id="Activities"
-      className="py-14 bg-white overflow-hidden scroll-mt-[90px]" // ✅ jarak pas dengan navbar
+      className="py-14 bg-white overflow-hidden scroll-mt-[90px]"
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
@@ -56,7 +68,8 @@ export default function Activities() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.6 }}
         >
-          Kumpulan dokumentasi kegiatan dan proyek pengembangan teknologi IoT dan AI.
+          Kumpulan dokumentasi kegiatan dan proyek pengembangan teknologi IoT
+          dan AI.
         </motion.p>
 
         {/* Slider */}
@@ -64,9 +77,9 @@ export default function Activities() {
           initial={{ opacity: 0, scale: 0.97 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
-          className="mx-auto"
+          className="flex justify-center mx-auto"
         >
-          <Slider {...settings}>
+          <Slider {...settings} className="w-full md:w-[90%]">
             {slides.map((s, i) => (
               <div
                 key={i}
@@ -75,10 +88,16 @@ export default function Activities() {
                 <img
                   src={s.img}
                   alt={s.caption}
-                  className="rounded-2xl shadow-lg w-full md:w-[90%] h-[260px] sm:h-[300px] md:h-[360px] object-cover transition-transform duration-700 hover:scale-[1.02]"
+                  className="rounded-2xl shadow-lg w-full h-[260px] sm:h-[300px] md:h-[360px] object-cover object-center transition-transform duration-700 hover:scale-[1.02]"
+                  style={{
+                    objectPosition: "center top",
+                    backgroundColor: "#000", // area kosong jadi hitam, bukan putih
+                  }}
                 />
-                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full md:w-[90%] bg-black bg-opacity-50 text-white text-center p-3 rounded-b-2xl">
-                  <p className="text-sm md:text-base font-medium">{s.caption}</p>
+                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full bg-black bg-opacity-50 text-white text-center p-3 rounded-b-2xl">
+                  <p className="text-sm md:text-base font-medium">
+                    {s.caption}
+                  </p>
                 </div>
               </div>
             ))}
