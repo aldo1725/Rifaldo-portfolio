@@ -11,22 +11,22 @@ export default function Activities() {
   ];
 
   const settings = {
-    dots: true,
-    infinite: true,
-    autoplay: true,
-    fade: false, // efek slide kiri-kanan
-    speed: 800,
-    autoplaySpeed: 3500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    centerMode: false, // 🔧 nonaktifkan biar gambar tidak geser ke kanan
-    centerPadding: "0px",
-    pauseOnHover: true,
-    arrows: false,
-    cssEase: "ease-in-out",
-    swipe: true,
-    swipeToSlide: true,
-    touchMove: true,
+      dots: true,
+      infinite: true,
+      autoplay: true,
+      fade: false,
+      speed: 800,
+      autoplaySpeed: 3500,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      centerMode: false,          // ubah ke false
+      centerPadding: "0px",
+      pauseOnHover: true,
+      arrows: false,
+      cssEase: "ease-in-out",
+      swipe: true,
+      swipeToSlide: true,
+      touchMove: true,
   };
 
   return (
