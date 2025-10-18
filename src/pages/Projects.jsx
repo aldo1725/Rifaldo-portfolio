@@ -8,7 +8,7 @@ const projects = [
     desc: "Berpartisipasi dalam Kontes Robot Indonesia (KRI) 2022 sebagai perwakilan Universitas Negeri Padang di Divisi ABU Robocon. Acara diselenggarakan oleh Pusat Prestasi Nasional di ITS Surabaya pada 29 Juni – 4 Juli 2022. Terlibat dalam perancangan teknis, pemrograman, dan kolaborasi tim untuk bersaing di tingkat nasional.",
     bidang: "Hardware dan Mekanikal",
     tags: ["KRI 2022", "ABU Robocon", "Robotika"],
-    image: "https://images.unsplash.com/photo-1581091215367-59ab6e9e54d9",
+    image: "/images/kri2022.jpg",
   },
   {
     year: 2023,
@@ -16,7 +16,7 @@ const projects = [
     desc: "Mengikuti Kontes Robot Indonesia (KRI) 2023 yang diselenggarakan di Universitas Semarang pada 21–26 Juni. Mengangkat tema ABU Robocon 2023 Cambodia: 'Casting Flowers over Angkor Wat', di mana robot harus melempar bunga buatan ke menara simbolik. Berperan dalam desain mekanisme pelemparan presisi, perhitungan lintasan, serta koordinasi strategi selama pertandingan.",
     bidang: "Hardware dan Mekanikal",
     tags: ["KRI 2023", "ABU Robocon", "Robotika"],
-    image: "https://images.unsplash.com/photo-1603791440384-56cd371ee9a7",
+    image: "/images/kri2023.jpg",
   },
   {
     year: 2023,
@@ -24,7 +24,7 @@ const projects = [
     desc: "Berpartisipasi dalam PKM-KC 2023 yang diselenggarakan oleh Ditjen Diktiristek. Bekerja sama dengan tim lintas disiplin dari Universitas Negeri Padang untuk mengembangkan headphone getar berbasis Android dengan teknologi Speech-to-Text, guna membantu penyandang tuli dan tunarungu dalam komunikasi real-time. Proyek ini berhasil memperoleh pendanaan pemerintah dan berfokus pada teknologi inklusif dan inovasi sosial.",
     bidang: "Hardware",
     tags: ["PKM-KC", "Inovasi", "Android", "Assistive Tech"],
-    image: "https://images.unsplash.com/photo-1581092334471-45b4c4fdf7b2",
+    image: "/images/pkmkc2023.jpg",
   },
   {
     year: 2024,
@@ -32,7 +32,7 @@ const projects = [
     desc: "Finalis nasional Kontes Robot Indonesia (KRI) 2024 yang diselenggarakan di Universitas Muhammadiyah Surakarta pada 1–6 Juli. Tema lomba mengadaptasi ABU Robocon 2024 Vietnam: 'Harvest Day', di mana robot secara otonom memanen dan mengangkut hasil pertanian. Berperan sebagai anggota inti tim Do’a Mande dalam pengembangan algoritma navigasi otonom, sistem mekanik penanganan, dan strategi integratif.",
     bidang: "Hardware dan Mekanikal",
     tags: ["KRI 2024", "Robot Otonom", "STM32"],
-    image: "https://images.unsplash.com/photo-1523961131990-5ea7c61b2107",
+    image: "/images/kri2024.jpg",
   },
   {
     year: 2024,
@@ -40,7 +40,7 @@ const projects = [
     desc: "Menjadi peserta Magang dan Studi Independen Bersertifikat (MSIB) Batch 7 di PT Stechoq Robotika Indonesia. Berfokus pada pembuatan proyek akhir berupa perancangan ventilator berbasis Internet of Things (IoT) untuk kebutuhan medis.",
     bidang: "Hardware",
     tags: ["MSIB", "IoT", "Ventilator"],
-    image: "https://images.unsplash.com/photo-1611691546038-7c2a5c69f26a",
+    image: "/images/msib2024.jpg",
   },
   {
     year: 2025,
@@ -48,7 +48,15 @@ const projects = [
     desc: "Membuat sistem stasiun cuaca berbasis LoRa RA02 menggunakan mikrokontroler STM32. Sistem ini dirancang untuk mengukur kelembapan tanah, suhu, kecepatan angin, dan curah hujan, dengan integrasi IoT untuk pemantauan jarak jauh.",
     bidang: "Hardware, Mekanikal, dan Pemrograman",
     tags: ["LoRa", "STM32", "IoT", "Weather Station"],
-    image: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32",
+    image: "/images/weather2025.jpg",
+  },
+  {
+    year: 2025,
+    title: "Proyek – Cold and Heat Chamber",
+    desc: "Membangun sistem uji suhu otomatis (Cold & Heat Chamber) menggunakan mikrokontroler untuk mengontrol suhu ekstrem secara presisi. Sistem ini digunakan untuk pengujian perangkat elektronik pada kondisi ekstrem.",
+    bidang: "Hardware, Pemrograman",
+    tags: ["IoT", "Automation", "Testing"],
+    image: "/images/chamber2025.jpg",
   },
 ];
 
