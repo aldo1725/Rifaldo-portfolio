@@ -5,8 +5,24 @@ import { motion } from "framer-motion";
 export default function Activities() {
   const slides = [
     {
-      img: "/slide/kegiatan1.jpg",
+      img: "/slide/kri2022.jpg",
       caption: "Lomba KRI 2022 - Kontes Robot Indonesia",
+    },
+    {
+      img: "/slide/kri2023.jpg",
+      caption: "Lomba KRI 2023 - Kontes Robot Indonesia",
+    },
+    {
+      img: "/slide/kri2024.jpg",
+      caption: "Lomba KRI 2024 - Kontes Robot Indonesia",
+    },
+    {
+      img: "/slide/manajemen1.jpg",
+      caption: "Kepanitiaan- UKRO UNP",
+    },
+    {
+      img: "/slide/manajemen2.jpg",
+      caption: "Kepanitiaan- UKRO UNP",
     },
     {
       img: "/slide/kegiatan2.jpg",
