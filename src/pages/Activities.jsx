@@ -5,11 +5,11 @@ import { motion } from "framer-motion";
 export default function Activities() {
   const slides = [
     {
-      img: "/slide/kri2022.jpg",
+      img: "/slide/kri1.jpg",
       caption: "Lomba KRI 2022 - Kontes Robot Indonesia",
     },
     {
-      img: "/slide/kri2023.jpg",
+      img: "/slide/kri2.jpg",
       caption: "Lomba KRI 2023 - Kontes Robot Indonesia",
     },
     // {
@@ -73,8 +73,7 @@ export default function Activities() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.6 }}
         >
-          Kumpulan dokumentasi kegiatan dan proyek pengembangan teknologi IoT
-          dan AI.
+          Kumpulan dokumentasi kegiatan organisasi dan proyek .
         </motion.p>
 
         {/* Slider */}
