@@ -24,18 +24,7 @@ export default function Activities() {
       img: "/slide/manajemen2.jpg",
       caption: "Kepanitiaan- UKRO UNP",
     },
-    {
-      img: "/slide/kegiatan2.jpg",
-      caption: "Workshop IoT di Universitas Negeri Padang",
-    },
-    {
-      img: "/slide/kegiatan3.jpg",
-      caption: "Riset Pengembangan Sensor Cuaca Cerdas",
-    },
-    {
-      img: "/slide/kegiatan4.jpg",
-      caption: "Demo Proyek AI & IoT Terapan 2024",
-    },
+
   ];
 
   const settings = {

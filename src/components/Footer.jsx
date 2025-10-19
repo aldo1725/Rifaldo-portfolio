@@ -99,7 +99,7 @@ export default function Footer() {
       >
         © {new Date().getFullYear()}{" "}
         <span className="text-gray-300 font-medium">Rifaldo Saputra.</span>{" "}
-        Dibuat dengan menggunakan React & TailwindCSS.
+
       </motion.div>
     </footer>
   );
