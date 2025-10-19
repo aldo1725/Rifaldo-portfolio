@@ -69,7 +69,7 @@ export default function Projects() {
 
     // 🪄 Scroll dengan offset agar konten muncul tepat di tengah
     const element = topRef.current;
-    const navbarHeight = 90; // kira-kira tinggi navbar
+    const navbarHeight = 90; // tinggi navbar kira-kira
     const yOffset =
       element.getBoundingClientRect().top + window.pageYOffset - navbarHeight - 50;
 
@@ -109,10 +109,11 @@ export default function Projects() {
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
           >
+            {/* ✅ Gambar kini menyesuaikan proporsi asli */}
             <motion.img
               src={selected.image}
               alt={selected.title}
-              className="w-full md:w-1/2 h-64 object-cover"
+              className="w-full md:w-1/2 h-auto object-contain md:max-h-96 bg-gray-50"
               initial={{ scale: 1.05 }}
               animate={{ scale: 1 }}
               transition={{ duration: 1.2, ease: "easeOut" }}
