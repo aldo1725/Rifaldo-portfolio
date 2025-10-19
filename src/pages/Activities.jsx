@@ -20,10 +20,10 @@ export default function Activities() {
       img: "/slide/msib.jpg",
       caption: "Studi Independen Hardware Engineer- PT.Stechoq Robotika Indonesia",
     },
-    {
-      img: "/slide/manajemen2.jpg",
-      caption: "Kepanitiaan- UKRO UNP",
-    },
+    // {
+    //   img: "/slide/manajemen2.jpg",
+    //   caption: "Kepanitiaan- UKRO UNP",
+    // },
 
   ];
 
