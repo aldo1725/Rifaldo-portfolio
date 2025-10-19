@@ -12,18 +12,18 @@ export default function Activities() {
       img: "/slide/kri2023.jpg",
       caption: "Lomba KRI 2023 - Kontes Robot Indonesia",
     },
-    {
-      img: "/slide/kri2024.jpg",
-      caption: "Lomba KRI 2024 - Kontes Robot Indonesia",
-    },
-    {
-      img: "/slide/manajemen1.jpg",
-      caption: "Kepanitiaan- UKRO UNP",
-    },
-    {
-      img: "/slide/manajemen2.jpg",
-      caption: "Kepanitiaan- UKRO UNP",
-    },
+    // {
+    //   img: "/slide/kri2024.jpg",
+    //   caption: "Lomba KRI 2024 - Kontes Robot Indonesia",
+    // },
+    // {
+    //   img: "/slide/manajemen1.jpg",
+    //   caption: "Kepanitiaan- UKRO UNP",
+    // },
+    // {
+    //   img: "/slide/manajemen2.jpg",
+    //   caption: "Kepanitiaan- UKRO UNP",
+    // },
 
   ];
 
