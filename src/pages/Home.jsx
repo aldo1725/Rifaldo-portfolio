@@ -19,7 +19,7 @@ export default function Home() {
 
           <p className="text-lg text-gray-600 mb-6">
             Mahasiswa Teknik Elektro yang fokus pada <b>Internet of Things</b>, <b>Robotika</b>, dan{" "}
-            <b>Otomasi</b>. Saat ini mengerjakan proyek <i>Weather Station IoT</i> Camber.
+            <b>Otomasi</b>.
           </p>
 
           {/* Tombol aksi */}
