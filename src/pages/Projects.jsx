@@ -71,7 +71,7 @@ export default function Projects() {
     const element = topRef.current;
     const navbarHeight = 90; // kira-kira tinggi navbar
     const yOffset =
-      element.getBoundingClientRect().top + window.pageYOffset - navbarHeight + 50;
+      element.getBoundingClientRect().top + window.pageYOffset - navbarHeight - 70;
 
     window.scrollTo({ top: yOffset, behavior: "smooth" });
   };
