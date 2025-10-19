@@ -48,7 +48,7 @@ const projects = [
     desc: "Membuat sistem stasiun cuaca berbasis LoRa RA02 menggunakan mikrokontroler STM32. Sistem ini dirancang untuk mengukur kelembapan tanah, suhu, kecepatan angin, dan curah hujan, dengan integrasi IoT untuk pemantauan jarak jauh.",
     bidang: "Hardware, Mekanikal, dan Pemrograman",
     tags: ["LoRa", "STM32", "IoT", "Weather Station"],
-    image: "/images/weather2025.jpg",
+    image: "",
   },
   {
     year: 2025,
