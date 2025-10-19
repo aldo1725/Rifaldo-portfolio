@@ -69,9 +69,9 @@ export default function Projects() {
 
     // 🪄 Scroll dengan offset agar konten muncul tepat di tengah
     const element = topRef.current;
-    const navbarHeight = 140; // kira-kira tinggi navbar
+    const navbarHeight = 90; // kira-kira tinggi navbar
     const yOffset =
-      element.getBoundingClientRect().top + window.pageYOffset - navbarHeight - 80;
+      element.getBoundingClientRect().top + window.pageYOffset - navbarHeight + 50;
 
     window.scrollTo({ top: yOffset, behavior: "smooth" });
   };
