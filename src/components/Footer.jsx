@@ -24,10 +24,7 @@ export default function Footer() {
             minat tinggi pada pengembangan hardware, otomasi, dan IoT.
             Berpengalaman dalam pengembangan sistem berbasis Arduino, ESP32, dan STM32.
           </p>
-
-          <p className="italic text-gray-400 border-l-2 border-blue-400 pl-3 text-sm">
-            “Siap berkolaborasi untuk mengembangkan sistem tertanam dan solusi IoT yang inovatif dan efisien.”
-          </p>
+          
         </div>
 
         {/* Kolom 2: Navigasi Cepat */}
