@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import avatar from "../assets/rifaldo.jpg"; // ✅ Ganti dengan foto kamu di folder assets
+import avatar from "../assets/avatar.svg";
 
 export default function Home() {
   return (
@@ -18,8 +18,8 @@ export default function Home() {
           </h1>
 
           <p className="text-lg text-gray-600 mb-6">
-            Mahasiswa Teknik Elektro yang fokus pada <b>Internet of Things</b>,{" "}
-            <b>Robotika</b>, dan <b>Otomasi</b>.
+            Mahasiswa Teknik Elektro yang fokus pada <b>Internet of Things</b>, <b>Robotika</b>, dan{" "}
+            <b>Otomasi</b>.
           </p>
 
           {/* Tombol aksi */}
@@ -57,16 +57,12 @@ export default function Home() {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="relative flex justify-center"
+          className="flex justify-center"
         >
-          {/* Efek background lembut */}
-          <div className="absolute w-72 h-72 md:w-96 md:h-96 bg-gradient-to-tr from-blue-200 via-white to-blue-100 rounded-full blur-3xl opacity-40"></div>
-
-          {/* Foto profil lingkaran */}
           <img
             src={avatar}
-            alt="Rifaldo Saputra"
-            className="relative w-64 h-64 md:w-80 md:h-80 object-cover object-top rounded-full shadow-2xl border-4 border-gray-200"
+            alt="Avatar"
+            className="w-64 md:w-80 drop-shadow-lg"
           />
         </motion.div>
       </div>
