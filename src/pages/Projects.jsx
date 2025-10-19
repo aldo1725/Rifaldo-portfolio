@@ -56,7 +56,7 @@ const projects = [
     desc: "Membangun sistem uji suhu otomatis (Cold & Heat Chamber) menggunakan mikrokontroler untuk mengontrol suhu ekstrem secara presisi. Sistem ini digunakan untuk pengujian perangkat elektronik pada kondisi ekstrem.",
     bidang: "Hardware, Pemrograman",
     tags: ["IoT", "Automation", "Testing"],
-    image: "/images/chamber2025.jpg",
+    image: "", // contoh tanpa gambar
   },
 ];
 
@@ -67,9 +67,9 @@ export default function Projects() {
   const handleSelect = (p) => {
     setSelected(p);
 
-    // 🪄 Scroll dengan offset agar konten muncul tepat di tengah
+    // Scroll halus dengan offset
     const element = topRef.current;
-    const navbarHeight = 90; // tinggi navbar kira-kira
+    const navbarHeight = 90;
     const yOffset =
       element.getBoundingClientRect().top + window.pageYOffset - navbarHeight - 50;
 
@@ -103,22 +103,34 @@ export default function Projects() {
         <AnimatePresence mode="wait">
           <motion.div
             key={selected.title}
-            className="flex flex-col md:flex-row items-center bg-white shadow-md rounded-2xl overflow-hidden mb-12"
+            className={`flex flex-col ${
+              selected.image ? "md:flex-row" : "md:flex-col text-center justify-center"
+            } items-center bg-white shadow-md rounded-2xl overflow-hidden mb-12`}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
           >
-            {/* ✅ Gambar kini menyesuaikan proporsi asli */}
-            <motion.img
-              src={selected.image}
-              alt={selected.title}
-              className="w-full md:w-1/2 h-auto object-contain md:max-h-96 bg-gray-50"
-              initial={{ scale: 1.05 }}
-              animate={{ scale: 1 }}
-              transition={{ duration: 1.2, ease: "easeOut" }}
-            />
-            <div className="p-6 md:w-1/2">
+            {/* ✅ Jika ada gambar */}
+            {selected.image ? (
+              <motion.img
+                src={selected.image}
+                alt={selected.title}
+                className="w-full md:w-1/2 h-auto object-contain md:max-h-[420px] bg-gray-50"
+                initial={{ scale: 1.05 }}
+                animate={{ scale: 1 }}
+                transition={{ duration: 1.2, ease: "easeOut" }}
+              />
+            ) : null}
+
+            {/* Detail teks */}
+            <div
+              className={`p-6 ${
+                selected.image
+                  ? "md:w-1/2 text-left"
+                  : "text-center flex flex-col items-center justify-center"
+              }`}
+            >
               <p className="text-sm text-blue-600 font-semibold mb-1">
                 Proyek Tahun {selected.year}
               </p>
@@ -127,7 +139,7 @@ export default function Projects() {
               <p className="text-sm text-gray-500 mb-3">
                 <strong>Bidang:</strong> {selected.bidang}
               </p>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap justify-center md:justify-start gap-2">
                 {selected.tags.map((tag, i) => (
                   <span
                     key={i}
