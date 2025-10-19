@@ -38,30 +38,20 @@ export default function About() {
             </div>
           </div>
 
-          {/* Visi Karir */}
-          <div className="flex items-start gap-4 bg-purple-50 border border-purple-100 p-5 rounded-xl shadow-sm">
-            <Target className="text-purple-500 w-8 h-8" />
-            <div>
-              <h3 className="font-semibold text-lg text-gray-800">Visi Karir</h3>
-              <p className="italic text-gray-700">
-                “Siap berkolaborasi untuk mengembangkan sistem tertanam dan solusi IoT yang inovatif dan efisien.”
-              </p>
-            </div>
-          </div>
         </div>
 
         {/* Statistik */}
         <div className="mt-10 flex flex-col sm:flex-row justify-center gap-6 text-center">
           <div className="flex-1 bg-blue-50 rounded-xl p-4 shadow-sm">
-            <p className="text-3xl font-bold text-blue-600">4+</p>
+            <p className="text-3xl font-bold text-blue-600">4</p>
             <p className="text-gray-700 text-sm">Tahun Pengalaman</p>
           </div>
           <div className="flex-1 bg-green-50 rounded-xl p-4 shadow-sm">
-            <p className="text-3xl font-bold text-green-600">10+</p>
+            <p className="text-3xl font-bold text-green-600">7</p>
             <p className="text-gray-700 text-sm">Proyek Selesai</p>
           </div>
           <div className="flex-1 bg-purple-50 rounded-xl p-4 shadow-sm">
-            <p className="text-3xl font-bold text-purple-600">3</p>
+            <p className="text-3xl font-bold text-purple-600">6</p>
             <p className="text-gray-700 text-sm">Penghargaan</p>
           </div>
         </div>
