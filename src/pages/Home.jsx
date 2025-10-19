@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import avatar from "../assets/avatar.svg";
+import avatar from "../assets/rifaldo.jpg"; // ✅ ganti foto di folder assets
 
 export default function Home() {
   return (
@@ -18,8 +18,8 @@ export default function Home() {
           </h1>
 
           <p className="text-lg text-gray-600 mb-6">
-            Mahasiswa Teknik Elektro yang fokus pada <b>Internet of Things</b>, <b>Robotika</b>, dan{" "}
-            <b>Otomasi</b>.
+            Mahasiswa Teknik Elektro yang fokus pada <b>Internet of Things</b>,{" "}
+            <b>Robotika</b>, dan <b>Otomasi</b>.
           </p>
 
           {/* Tombol aksi */}
@@ -61,8 +61,8 @@ export default function Home() {
         >
           <img
             src={avatar}
-            alt="Avatar"
-            className="w-64 md:w-80 drop-shadow-lg"
+            alt="Rifaldo Saputra"
+            className="w-64 h-64 md:w-80 md:h-80 object-cover object-top rounded-2xl shadow-lg border-2 border-gray-200"
           />
         </motion.div>
       </div>
